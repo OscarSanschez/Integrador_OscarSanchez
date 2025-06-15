@@ -45,7 +45,7 @@ jobs:
           # Capturar cobertura con LCOV
           lcov --capture --directory . --output-file coverage.info --ignore-errors mismatch
           # Convertir cobertura al formato compatible con SonarQube
-          gcovr --root .. --exclude 'tests/*' --exclude 'build/*' --exclude 'main.cpp' --sonarqube -o coverage.xml --print-summary
+          gcovr --root .. --exclude 'tests/*' --exclude 'build/*' --sonarqube -o coverage.xml --print-summary
 
       # 7. Subir informe de cobertura
       - name: Upload Coverage Report
