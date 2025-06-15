@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.30)
 
 # Nombre del proyecto
-project(sonarqube_unit_test VERSION 1.0.0 LANGUAGES C CXX)
+project(Integrador_OscarSanchez VERSION 1.0.0 LANGUAGES C CXX)
 
 # Configuración global de CMake
 set(CMAKE_CXX_STANDARD 20)
@@ -15,8 +15,6 @@ include_directories(${CMAKE_SOURCE_DIR})
 set(SOURCES
         main.cpp
         sum.h
-        sub.h
-        div.h
 )
 
 # Crear el ejecutable principal
@@ -59,8 +57,6 @@ if(ENABLE_TESTING)
 
     # Archivos de pruebas
     add_test_executable(test_sum test/test_sum.cpp)
-    add_test_executable(test_sub test/test_sub.cpp)
-    add_test_executable(test_divide test/test_divide.cpp)
 
     # Generar reportes de cobertura
     if (ENABLE_COVERAGE)
